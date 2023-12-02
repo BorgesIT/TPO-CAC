@@ -1,0 +1,90 @@
+/* Formulario de Registro */
+
+.registro{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    text-align: center;
+    font-weight: 700;
+}
+
+.form{
+    background: #df4545;
+    padding: 40px 0;
+    box-shadow: 0 0 6px rgb(214, 36, 36);
+    border-radius: 10px;
+}
+
+.register{
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo{
+    position: relative;
+    margin: 45px;
+}
+
+.entradas{
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.entradas:focus{
+    outline: none;
+}
+
+label{
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+.entradas:focus~label,
+.entradas:valid~label{
+    top: -16px;
+    font-size: 12px;
+    color: #c9c9c9;
+}
+
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: #e05757;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+.entradas:focus~.barra::before{
+    width: 100%;
+}
+
+button{
+    background: #000000;
+    display: block;
+    color: #fff;
+    border: none;
+    width: 80%;
+    margin: 10px auto;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
